@@ -1,0 +1,91 @@
+<div class="outer">
+    <div class="flex-container">
+        <div class="form-container">
+                <h1 class="title">hcard Profile</h1>
+                <div class="form-groups" id="personal">
+                    <div class="subtitle"><span>PERSONAL DETAILS</span></div>
+                    <form [formGroup]="personalForm">
+                        <div class="form-group">
+                            <label for="name">GIVEN NAME</label>
+                            <input type="text" class="form-control" id="givenName" formControlName="givenName">
+                            <span class="text-danger input-error" *ngIf="isPersonalFormFieldInvalid('givenName')" >
+                                {{personalForm.controls['givenName'].getError('required')}}
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">SURNAME</label>
+                            <input type="text" class="form-control" id="surname" formControlName="surname">
+                            <span class="text-danger input-error" *ngIf="isPersonalFormFieldInvalid('surname')" >
+                                {{personalForm.controls['surname'].getError('required')}}
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">EMAIL</label>
+                            <input type="text" class="form-control" id="email" formControlName="email">
+                            <span class="text-danger input-error" *ngIf="isPersonalFormFieldInvalid('email')" >
+                                {{personalForm.controls['email'].getError('required')}}
+                                {{personalForm.controls['email'].getError('email')}}
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">PHONE</label>
+                            <input type="text" class="form-control" id="phone" formControlName="phone">
+                            <span class="text-danger input-error" *ngIf="isPersonalFormFieldInvalid('phone')" >
+                                {{personalForm.controls['phone'].getError('required')}}
+                                {{personalForm.controls['phone'].getError('phone')}}
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-groups" id="address">
+                    <div class="subtitle"><span>ADDRESS DETAILS</span></div>
+                    <form [formGroup]="addressForm">
+                        <div class="form-group">
+                            <label for="name">HOUSE NAME OR # </label>
+                            <input type="text" class="form-control" id="givenName" formControlName="houseNameOrNumber">
+                            <span class="text-danger input-error" *ngIf="isAddressFormFieldInvalid('houseNameOrNumber')" >
+                                {{addressForm.controls['houseNameOrNumber'].getError('required')}}
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">STREET</label>
+                            <input type="text" class="form-control" id="street" formControlName="street">
+                            <span class="text-danger input-error" *ngIf="isAddressFormFieldInvalid('street')" >
+                                {{addressForm.controls['street'].getError('required')}}
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">SURBURB</label>
+                            <input type="text" class="form-control" id="suburb" formControlName="suburb">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">STATE</label>
+                            <input type="text" class="form-control" id="state" formControlName="state">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">POSTCODE</label>
+                            <input type="text" class="form-control" id="postcode" formControlName="postcode">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">COUNTRY</label>
+                            <input type="text" class="form-control" id="country" formControlName="country">
+                        </div>
+                    </form>
+                </div>
+                <div class="button-groups">
+                    <button class="btn default" (click)="fileInput.click()">
+                        Upload Avatar
+                        <span style="visibility: hidden; position: absolute; overflow: hidden; width: 0px; height:0px;border:none;margin:0; padding:0">
+                            <input type="file" #fileInput ng2FileSelect accept=".jpg,.jpeg,.png" [uploader]="imageUploader"/>
+                        </span> 
+                    </button>
+                    <button class="btn submit" (click)="submitForm()">
+                        Create hCard
+                    </button>
+                </div>
+        </div>
+        <div class="preview-container">
+            <preview-card></preview-card>
+        </div>
+    </div>
+</div>

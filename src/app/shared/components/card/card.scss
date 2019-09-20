@@ -1,0 +1,106 @@
+@import '~src/scss/theme';
+
+.card-container{
+    font-family: "Merriweather";
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    .card {
+        margin: 5em 0;
+        border: 1px solid #000;
+        background-color: #fff;
+        width: 90%;
+        min-height: 24em;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .card-title{
+            font-family: "Merriweather Sans";
+            position: absolute;
+            top: -1.5em;
+            right: 0px;
+            color: $default-button-color;
+        }
+        .card-header {
+            height: 7em;
+            background-color: $primary-color;
+            position: relative;
+            flex-grow: 0;
+            flex-shrink: 0;
+            &>.avatar{
+                position: absolute;
+                width: 5em;
+                height: 6em;
+                right: 0.8em;
+                top: 0.8em;
+                border: 1px solid #000;
+                padding: 10px;
+                background: #fff;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            &>p{
+                position: absolute;
+                font-size: 28px;
+                color: #fff;
+                bottom: 0px;
+                left: 0px;
+                margin-left: 1em;
+                margin-bottom: 0.5em;
+            }
+        }
+        .card-body{
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 1.5em;
+            color: $primary-color;
+            
+            @media (max-width: 375px) {
+                font-size: 14px;
+            }
+            .detail-group{
+                display: flex;
+                border-bottom: 1px solid $text-color-two;
+                max-width: 100%;
+                overflow-x: auto;
+                margin-bottom: 0.5em;
+                &.line-two {
+                    span{
+                        padding-left: 6em;
+                        @media (max-width: 375px) {
+                            padding-left: 5em;
+                            
+                        }
+                    }
+                }
+                .sub-group{
+                    flex: 0 0 50%;
+                    display: flex;
+                }
+                span{
+                    height: 2em;
+                    flex-grow: 1;
+                    flex-shrink: 0;
+                }
+                label{
+                    height: 2em;
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex: 0 1 6em;
+                    @media (max-width: 375px) {
+                        flex-basis: 5em;
+                        
+                    }
+                }
+            }
+        }
+
+    }
+}

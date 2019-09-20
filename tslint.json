@@ -1,0 +1,84 @@
+{
+  "extends": "tslint:recommended",
+  "rulesDirectory": [
+    "codelyzer"
+  ],
+  "rules": {
+    "array-type": false,
+    "arrow-parens": false,
+    "deprecation": {
+      "severity": "warn"
+    },
+    "import-blacklist": [
+      true,
+      "rxjs/Rx"
+    ],
+    "radix": false,
+    "no-trailing-whitespace": false,
+    "interface-name": false,
+    "max-classes-per-file": false,
+    "member-access": false,
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "static-field",
+          "instance-field",
+          "static-method",
+          "instance-method"
+        ]
+      }
+    ],
+    "forin": false,
+    "class-name": false,
+    "no-angle-bracket-type-assertion": false,
+    "jsdoc-format":false,
+    "prefer-const": false,
+    "comment-format": false,
+    "no-conditional-assignment":false,
+    "space-before-function-paren":false,
+    "only-arrow-functions": false,
+    "one-variable-per-declaration": false,
+    "object-literal-shorthand":false,
+    "curly": false,
+    "align": false,
+    "variable-name": false,
+    "no-string-literal": false,
+    "max-line-length": false,
+    "quotemark": false,
+    "no-consecutive-blank-lines": false,
+    "prefer-for-of": false,
+    "no-console": [
+      false,
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "no-empty": false,
+    "no-inferrable-types": [
+      false
+    ],
+    "no-non-null-assertion": true,
+    "no-redundant-jsdoc": false,
+    "no-switch-case-fall-through": true,
+    "no-use-before-declare": true,
+    "no-var-requires": false,
+    "object-literal-key-quotes": [
+      false,
+      "as-needed"
+    ],
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "trailing-comma": false,
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "one-line":false
+  }
+}

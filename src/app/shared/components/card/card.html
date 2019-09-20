@@ -1,0 +1,29 @@
+<div class="card-container">
+    <div class="card">
+        <div class="card-title" >PREVIEW CARD</div>
+        <div class="card-header">
+            <p>{{profileName}}</p>
+            <div class="avatar" [style.background-image]="'url(' + photoPath + ')'">
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="detail-group">
+                <label>Email</label>
+                <span>{{emailAddress}}</span>
+            </div>
+            <div class="detail-group">
+                <label>Phone</label>
+                <span>{{phoneNumber}}</span>
+            </div>
+            <div class="detail-group ">
+                <label>Address</label>
+                <span>{{addressLineOne}}</span></div>
+            <div class="detail-group line-two">
+                <span>{{addressLineTwo}}</span></div>
+            <div class="detail-group">
+                <div class="sub-group"><label>Postcode</label><span>{{postcode}}</span></div>
+                <div class="sub-group"><label>Country</label><span>{{country}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>

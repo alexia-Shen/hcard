@@ -1,0 +1,114 @@
+@import '~src/scss/theme';
+
+.outer{
+    .flex-container{
+        display: flex;
+        min-height: 100vh;
+        @media(max-width: 1024px) {
+            flex-direction: column;
+        }
+        .form-container{
+            flex: 0 0 40%;
+            padding: 3em 5%;
+            flex-direction: column;
+            justify-content: flex-start;
+            &>*{
+                flex: 1 0 auto;
+            }
+            .title{
+                font-size: 28px;
+                color: $text-color-one;
+                font-weight: 800;
+            }
+            .form-groups{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1.5em;
+                &>form{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    
+                }
+                .subtitle{
+                    font-size: 14px;
+                    color: $text-color-two;
+                    font-weight: 700;
+                    border-bottom: 1px solid $text-color-two;
+                    margin-bottom: 1em;
+                }
+                .form-group{
+                    flex: 1 0 40%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0.5em 0.5em 0.8em;
+                    position: relative;
+                    color: $primary-color;
+                    .form-control{
+                        font-family: "Merriweather Sans";
+                        border-radius: 3px;
+                        line-height: 2em;
+                        border: 1px solid $text-color-two;
+                        font-size: 16px;
+                        padding-left: 5px;
+                        height: 2em;
+                    }
+                    &:nth-child(2n){
+                        padding-right: 0px;
+                        .input-error{
+                            right: 0;
+                        }
+                    }
+                    &:nth-child(2n-1){
+                        padding-left: 0px;
+                    }
+                    @media (max-width: 375px) {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        right: 0;
+                    }
+                    .input-error{
+                        position: absolute;
+                        font-size: 14px;
+                        right: 0.5em;
+                        bottom: -0.5em;
+                    }
+                }
+            }
+            .button-groups{
+                display: flex;
+                justify-content: space-between;
+                .btn {
+                    flex: 1 0 auto;
+                    padding: 0.5em 1em;
+                    margin: 0 0.5em;
+                    border-radius: 3px;
+                    box-shadow: none;
+                    border: 1px solid;
+                    font-size: 20px;
+                    cursor: pointer;
+                    &.default{
+                        background-color: $default-button-color;
+                        border-color: $default-button-color;
+                        margin-left: 0px;
+                    }
+                    &.submit{
+                        background-color: $primary-button-color;
+                        border-color: $primary-button-color;
+                        margin-right: 0px;
+                    }
+                    @media (max-width: 375px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .preview-container{
+            flex: 0 0 50%;
+            background-color: #e8e8e8;
+            @media(max-width: 767px) {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
