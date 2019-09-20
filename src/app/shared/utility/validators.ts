@@ -18,9 +18,9 @@ export function required(): ValidatorFn {
         return Validators.required(control) === null ? null : { 'required': 'This field is required.' };
     };
 }
-export function maxLength(length: number): ValidatorFn {
-    return (control: AbstractControl): ValidationErrors | null => {
-        return Validators.required(control) === null ? null : { 'maxLength': 'This field exceeds maximun length: ${length} characters.' };
-    };
-}
+// export function maxLength(length: number): ValidatorFn {
+//     return (control: AbstractControl): ValidationErrors | null => {
+//         return Validators.required(control) === null ? null : { 'maxLength': 'This field exceeds maximun length: ${length} characters.' };
+//     };
+// }
 
